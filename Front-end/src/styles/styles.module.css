@@ -1,0 +1,94 @@
+/* how to use this css */
+
+/* import first
+import styles from '../styles/styles.module.css'
+
+then use like this
+className={styles.buy}
+styles["add-to-cart"]
+ */
+
+.span {
+    color: red
+}
+
+/* footer */
+.foterbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainfoter {
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+.credit {
+    text-align: center;
+    font-size: larger;
+   
+}
+
+/* gallery */
+.foto img {
+    height: 250px;
+    width: 25%;
+
+}
+
+.foto {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+/* button */
+.buy,.add-to-cart{
+    border:2px solid red;
+    padding: 5px 10px;
+    border-radius: 5px;
+    min-width: 120px;
+    color: red;
+   
+}
+.add-to-cart{
+    background-color:red;
+    color: white;
+}
+.buy:hover{
+    background-color: rgb(74 222 128);
+    color: white;
+    border:2px solid green;
+  
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box1 img {
+        border: none;
+        width: 100%;
+    }
+
+    .foto img {
+        display: block;
+        flex-direction: column;
+    }
+
+
+
+
+}
