@@ -19,5 +19,21 @@
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.3"
+  },
+  "vercel": {
+    "version": 2,
+    "builds": [
+      {
+        "src": "./dist/index.html",
+        "use": "@vercel/static-build",
+        "config": {}
+      }
+    ],
+    "routes": [
+      {
+        "src": "/*",
+        "dest": "index.html"
+      }
+    ]
   }
 }
