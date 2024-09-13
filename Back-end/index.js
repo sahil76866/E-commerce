@@ -25,6 +25,8 @@ app.use(express.static(path.resolve(__dirname,"dist")))
 
 
 app.use('/',router)
+app.get('*', (req, res) => res.sendFile(path.resolve('dist', 'index.html')));
+
 
 
 
