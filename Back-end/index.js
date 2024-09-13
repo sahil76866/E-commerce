@@ -24,11 +24,12 @@ app.use(cookieParser());
 app.use(express.static(__dirname + "/dist"));
 
 
-// app.get('*', (req, res) => res.sendFile(path.resolve('dist', 'index.html')));
 
 
 app.use('/', router);
+
 app.get('*', (req, res) => res.sendFile(__dirname + "/dist/index.html"));
+// app.get('*', (req, res) => res.sendFile(path.resolve('dist', 'index.html')));
 
 
 
