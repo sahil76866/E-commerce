@@ -1,4 +1,4 @@
-import express from'express';
+import express from 'express';
 import router from './routes/index.js';
 import cors from 'cors';
 import connection from './config/db.js';
@@ -14,22 +14,22 @@ dotenv.config({ path: './.env' });
 
 
 const Port = process.env.PORT
-const app=express()
+const app = express()
 
 
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
-// app.use(express.static(path.resolve(__dirname,"dist")))
-app.use(express.static(__dirname + "/dist"));
+app.use(express.static(path.resolve(__dirname, "dist")))
+
 
 
 
 
 app.use('/', router);
 
-app.get('*', (req, res) => res.sendFile(__dirname + "/dist/index.html"));
-// app.get('*', (req, res) => res.sendFile(path.resolve('dist', 'index.html')));
+
+app.get('*', (req, res) => res.sendFile(path.resolve('dist', 'index.html')));
 
 
 
@@ -38,6 +38,6 @@ connection().then(() => {
 
     app.listen(Port, () => console.log(`server is listen on Port ${Port}`))
 })
-.catch(err=>console.log(err.message))
+    .catch(err => console.log(err.message))
 
 
