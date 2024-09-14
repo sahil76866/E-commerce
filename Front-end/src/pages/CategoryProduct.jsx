@@ -128,7 +128,7 @@ const CategoryProduct = () => {
 
         {/* Desktop version */}
 
-        <div className='hidden lg:grid grid-cols-[200px,1fr]'>
+        <div className='md:grid grid-cols-[200px,1fr]'>
 
           {/* left side */}
 
