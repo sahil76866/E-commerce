@@ -9,7 +9,7 @@ const uploadImages = async (image) => {
     const formData = new FormData();
 
     formData.append('file', image);
-    formData.append('upload_preset', "Mern_Product")
+    formData.append('upload_preset', import.meta.env.VITE_CLOUDIARY_DATABASE)
 
     const dataResponse = await fetch(url, {
         method: 'POST',
