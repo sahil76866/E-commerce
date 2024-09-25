@@ -11,7 +11,7 @@ const apiSummary = {
         url: `${backendURL}/login`,
         method: "POST",
     },
-    current_user: {
+    current_user: { 
         url: `${backendURL}/userdetails`,
         method: "GET"
     },

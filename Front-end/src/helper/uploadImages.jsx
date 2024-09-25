@@ -3,7 +3,7 @@
 
 const uploadImages = async (image) => {
 
-    const url = `https://api.cloudinary.com/v1_1/dm3gywlh4/image/upload`
+    const url = `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDIARY_KEY}/image/upload`
 
 
     const formData = new FormData();
